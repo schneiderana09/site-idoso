@@ -2,11 +2,27 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+   <title>Sênior Seguro - Guia de Segurança Digital</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sênior Seguro - Guia de Segurança Digital</title>
+   <link rel="stylesheet" href="style.css">
+  
+</head>
 </head>
 <body>
 
+  <!-- BARRA SUPERIOR DE ACESSIBILIDADE -->
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de acessibilidade">
+    <span>🔍 <strong>Acessibilidade:</strong></span>
+    <div class="grupo-botoes-acessibilidade">
+      <button class="botao-ferramenta" onclick="alterarTamanhoFonte(2)" title="Aumentar tamanho do texto">A+</button>
+      <button class="botao-ferramenta" onclick="alterarTamanhoFonte(-2)" title="Diminuir tamanho do texto">A-</button>
+      <button class="botao-ferramenta" onclick="alternarAltoContraste()" title="Alternar contraste da tela">🌓 Alto Contraste</button>
+      <button class="botao-ferramenta" onclick="lerTextoPagina()" title="Ouvir o texto da tela em voz alta">🔊 Ouvir Tela</button>
+    </div>
+  </aside>
+
+  <!-- SEÇÃO 1: INÍCIO E BANNER DE AJUDA -->
+  <header>
   <header class="banner-inicio">
     <h1>Sênior Seguro</h1>
     <p>Seu espaço de proteção, orientação e segurança na internet.</p>
