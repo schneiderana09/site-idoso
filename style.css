@@ -1,126 +1,353 @@
 
-  body {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 22px; 
-      line-height: 1.6;
-      color: #000708; 
-      background-color: #f6f7fa02;
-      padding-bottom: 60px;
+border-radius: 16px;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgb:root {
+      --tamanho-fonte-base: 22px;
+      --cor-fundo: F4F7FA;
+      --cor-cartao: #FFFFFF;
+      --cor-texto: 1A1A1A;
+      --cor-primaria: #004B87;
+      --cor-primaria-escura: #002D54;
+      --cor-destaque: #D9381E;
+      --cor-destaque-hover: #B22222;
+      --cor-sucesso: #1B7E39;
+      --cor-alerta-fundo: #FFF3CD;
+      --cor-borda: #C3D1DF;
+      --foco-visivel: #FFD700;
     }
 
-  
-  section {
-      background-color: #f0e9e900;
-      margin-top: 35px;
-      padding: 35px;
-      border-radius: 16px;
-      border: 3px solid #0d66be;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    /* MODO DE ALTO CONTRASTE */
+    body.alto-contraste {
+      --cor-fundo: #000000;
+      --cor-cartao: #121212;
+      --cor-texto: #FFFFFF;
+      --cor-primaria: #FFD700;
+      --cor-primaria-escura: #FFA500;
+      --cor-destaque: #FF3333;
+      --cor-destaque-hover: #FF0000;
+      --cor-sucesso: #00FF66;
+      --cor-alerta-fundo: #332B00;
+      --cor-borda: #FFFFFF;
+      --foco-visivel: #00FFFF;
     }
 
-    h2 {
+    * {
       box-sizing: border-box;
-      margin: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: var(--tamanho-fonte-base);
+      line-height: 1.6;
+      color: var(--cor-texto);
+      background-color: var(--cor-fundo);
+      padding-bottom: 60px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* BARRA DE FERRAMENTAS DE ACESSIBILIDADE */
+    .barra-acessibilidade {
+      background-color: var(--cor-primaria-escura);
+      color: #FFFFFF;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .grupo-botoes-acessibilidade {
+      display: flex;
+      gap: 10px;
+    }
+
+    .botao-ferramenta {
+      background-color: #FFFFFF;
+      color: #002D54;
+      border: 2px solid var(--foco-visivel);
+      padding: 10px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .botao-ferramenta:hover,
+    .botao-ferramenta:focus {
+      background-color: var(--foco-visivel);
+      color: #000000;
+      outline: 4px solid var(--foco-visivel);
+    }
+
+    /* 1. INÍCIO: BANNER E BOTÃO DE AJUDA */
+    header {
+      background-color: var(--cor-primaria);
+      color: #FFFFFF;
       padding: 40px 20px;
-    }
-
-    banner-inicio {
-      background-color: #3a7cbd; 
-      color: #2676c0;
-      padding: 50px 20px;
       text-align: center;
-      border-bottom: 6px solid #9dc1e4;
+      border-bottom: 6px solid var(--cor-primaria-escura);
     }
 
-    banner-inicio h1 {
-      font-size: 36px;
+    body.alto-contraste header {
+      background-color: #121212;
+      color: var(--cor-primaria);
+    }
+
+    header h1 {
+      font-size: 1.8em;
       margin-bottom: 12px;
     }
 
-    banner-inicio p {
-      font-size: 24px;
-      margin-bottom: 30px;
+    header p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
 
-     botao-ajuda {
+    /* Botão de Ajuda */
+    .botao-ajuda {
       display: inline-block;
-      background-color: #D9381E; 
-      color: #1523e6;
-      font-size: 26px;
+      background-color: var(--cor-destaque);
+      color: #FFFFFF;
+      font-size: 1.2em;
       font-weight: bold;
-      padding: 22px 40px;
-      border: 4px solid #FFFFFF;
-      border-radius: 16px;
-      text-decoration: none;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      padding: 22px 38px;
+      border: 4px solid #FFFFFF;a(0,0,0,0.35);
       cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
     }
 
-    botao-ajuda:hover, 
-    botao-ajuda:focus {
-      background-color: #A00000;
-      outline: 5px solid #FFD700;
+    .botao-ajuda:hover, 
+    .botao-ajuda:focus {
+      background-color: var(--cor-destaque-hover);
+      transform: scale(1.03);
+      outline: 4px solid var(--foco-visivel);
     }
 
+    /* CONTAINER PRINCIPAL DO CONTEÚDO */
     main {
       max-width: 850px;
       margin: 0 auto;
-      font-size: 28px;
-      color: #003366;
-      margin-bottom: 24px;
-      border-bottom: 4px solid #003366;
-      padding-bottom: 10px;
+      padding: 20px;
     }
 
-    lista-dicas {
+    section {
+      background: var(--cor-cartao);
+      margin-top: 35px;
+      padding: 32px;
+      border-radius: 16px;
+      border: 3px solid var(--cor-borda);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: var(--cor-primaria);
+      margin-bottom: 24px;
+      border-bottom: 4px solid var(--cor-primaria);
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* 2. DICAS IMPORTANTES */
+    .lista-dicas {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
 
-    cartao-dica {
-      background-color: #EBF3FA;
-      border-left: 10px solid #003366;
-      padding: 20px 24px;
+    .cartao-dica {
+      background-color: var(--cor-fundo);
+      border-left: 10px solid var(--cor-primaria);
+      padding: 22px;
       border-radius: 10px;
+      border-top: 1px solid var(--cor-borda);
+      border-right: 1px solid var(--cor-borda);
+      border-bottom: 1px solid var(--cor-borda);
     }
 
-    cartao-dica h3 {
-      font-size: 24px;
-      color: #001A33;
+    .cartao-dica h3 {
+      font-size: 1.15em;
+      color: var(--cor-primaria);
       margin-bottom: 8px;
     }
 
-    texto-direitos  p {
+    /* 3. DIREITOS NA INTERNET */
+    .texto-direitos p {
       margin-bottom: 20px;
     }
 
-    caixa-destaque-direito {
-      background-color: #FFF8E7;
-      border: 3px solid #FFE082;
+    .destaque-direito {
+      background-color: var(--cor-alerta-fundo);
+      border: 3px solid var(--cor-primaria);
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: bold;
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
-    lista-suspeitas {
+    /* 4. ATITUDES SUSPEITAS (COMO SABER SE É GOLPE) */
+    .lista-golpe {
       list-style-type: none;
     }
 
-    lista-suspeitas  li {
+    .lista-golpe li {
       margin-bottom: 22px;
       padding-left: 50px;
       position: relative;
     }
 
-    lista-suspeitas  li::before {
+    .lista-golpe li::before {
       content: "⚠️";
       position: absolute;
-      left: 10;
-      top: 10;
-      font-size: 30px;
-     }
+      left: 0;
+      top: 0;
+      font-size: 1.3em;
+    }
+
+    /* SEÇÃO BÔNUS: QUIZ / PRÁTICA INTERATIVA */
+    .bloco-pratica {
+      background-color: var(--cor-fundo);
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px dashed var(--cor-primaria);
+    }
+
+    .botoes-resposta {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .botao-opcao {
+      flex: 1;
+      min-width: 140px;
+      padding: 16px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 10px;
+      border: 3px solid var(--cor-primaria);
+      background-color: var(--cor-cartao);
+      color: var(--cor-texto);
+      cursor: pointer;
+    }
+
+    .botao-opcao:hover,
+    .botao-opcao:focus {
+      background-color: var(--cor-primaria);
+      color: #FFFFFF;
+      outline: 4px solid var(--foco-visivel);
+    }
+
+    .caixa-resultado {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: none;
+    }
+
+    /* MODAL DE AJUDA */
+    .modal-fundo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-conteudo {
+      background-color: var(--cor-cartao);
+      color: var(--cor-texto);
+      padding: 30px;
+      border-radius: 18px;
+      max-width: 600px;
+      width: 100%;
+      border: 4px solid var(--cor-destaque);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .modal-conteudo h3 {
+      font-size: 1.4em;
+      color: var(--cor-destaque);
+      margin-bottom: 15px;
+    }
+
+    .opcoes-ajuda {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .link-emergencia {
+      display: block;
+      padding: 18px;
+      background-color: var(--cor-primaria);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      font-size: 1.1em;
+      border: 2px solid var(--cor-primaria-escura);
+    }
+
+    .link-emergencia:hover,
+    .link-emergencia:focus {
+      background-color: var(--cor-primaria-escura);
+      outline: 4px solid var(--foco-visivel);
+    }
+
+    .botao-fechar {
+      background-color: #666666;
+      color: #FFFFFF;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .botao-fechar:hover,
+    .botao-fechar:focus {
+      background-color: #333333;
+      outline: 4px solid var(--foco-visivel);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR DE ACESSIBILIDADE -->
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de acessibilidade">
+    <span>🔍 <strong>Acessibilidade:</strong></span>
+    <div class="grupo-botoes-acessibilidade">
+      <button class="botao-ferramenta" onclick="alterarTamanhoFonte(2)" title="Aumentar tamanho do texto">A+</button>
+      <button class="botao-ferramenta" onclick="alterarTamanhoFonte(-2)" title="Diminuir tamanho do texto">A-</button>
+      <button class="botao-ferramenta" onclick="alternarAltoContraste()" title="Alternar contraste da tela">🌓 Alto Contraste</button>
+      <button class="botao-ferramenta" onclick="lerTextoPagina()" title="Ouvir o texto da tela em voz alta">🔊 Ouvir Tela</button>
+    </div>
+  </aside>
+

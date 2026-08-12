@@ -9,8 +9,6 @@
 </head>
 </head>
 <body>
-
-  <!-- BARRA SUPERIOR DE ACESSIBILIDADE -->
   <aside class="barra-acessibilidade" aria-label="Ferramentas de acessibilidade">
     <span>🔍 <strong>Acessibilidade:</strong></span>
     <div class="grupo-botoes-acessibilidade">
@@ -21,7 +19,6 @@
     </div>
   </aside>
 
-  <!-- SEÇÃO 1: INÍCIO E BANNER DE AJUDA -->
   <header>
   <header class="banner-inicio">
     <h1>Sênior Seguro</h1>
@@ -37,57 +34,363 @@
       <h2>💡 Dicas Importantes</h2>
       <div class="lista-dicas">
         
+        <article class="cartao-dica"
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de acessibilidade">
+    <span>🔍 <strong>Acessibilidade:</strong></span>
+    <div class="grupo-botoes-acessibilidade">
+      <button class="botao-ferramenta" onclick="alterarTamanhoFonte(2)" title="Aumentar tamanho do texto">A+</button>
+      <button class="botao-ferramenta" onclick="alterarTamanhoFonte(-2)" title="Diminuir tamanho do texto">A-</button>
+      <button class="botao-ferramenta" onclick="alternarAltoContraste()" title="Alternar contraste da tela">🌓 Alto Contraste</button>
+      <button class="botao-ferramenta" onclick="lerTextoPagina()" title="Ouvir o texto da tela em voz alta">🔊 Ouvir Tela</button>
+    </div>
+  </aside>
+
+  <!-- SEÇÃO 1: INÍCIO E BANNER DE AJUDA -->
+  <header>
+    <h1>Sênior Seguro</h1>
+    <p>Seu espaço fácil e protegido de orientação para navegar na internet sem medos.</p>
+    
+    <button class="botao-ajuda" onclick="abrirModalAjuda()">
+      🚨 PEDIR AJUDA AGORA
+    </button>
+  </header>
+
+  <main>
+    <!-- SEÇÃO 2: DICAS IMPORTANTES -->
+    <section id="secao-dicas">
+      <h2>💡 Dicas Importantes</h2>
+      <div class="lista-dicas">
+        
         <article class="cartao-dica">
-          <h3>1. Guarde seus códigos em segredo</h3>
-          <p>Nunca envie para ninguém o código de números que chega por SMS no seu celular. Ele serve para proteger suas contas.</p>
+          <h3>1. Proteja seus códigos secretos</h3>
+          <p>Nunca envie para ninguém o código de 6 dígitos que chega por SMS ou mensagem no seu celular. Esse código dá acesso às suas contas.</p>
         </article>
 
         <article class="cartao-dica">
-          <h3>2. Mantenha a calma e confirme</h3>
-          <p>Se algum familiar pedir dinheiro por um número novo no WhatsApp, ligue para o número antigo dele antes de fazer qualquer pagamento.</p>
+          <h3>2. Pare e confirme com calma</h3>
+          <p>Se um parente ou amigo pedir dinheiro urgente por um número de telefone novo, desligue e ligue para o número antigo dele antes de transferir qualquer valor.</p>
         </article>
 
         <article class="cartao-dica">
-          <h3>3. Cuidado com links</h3>
-          <p>Bancos e órgãos do governo não mandam mensagens cobrando pagamentos com links para você clicar.</p>
+          <h3>3. Evite clicar em links desconhecidos</h3>
+          <p>Bancos e órgãos do governo não mandam mensagens por SMS cobrando pagamentos ou pedindo atualizações de cadastro urgentes por link.</p>
         </article>
 
       </div>
     </section>
 
-    <section class="texto-direitos">
+    <!-- SEÇÃO 3: DIREITOS NA INTERNET -->
+    <section class="texto-direitos" id="secao-direitos">
       <h2>⚖️ Seus Direitos na Internet</h2>
-      <p>A lei brasileira garante a sua proteção enquanto você navega na internet. Conheça os seus principais direitos:</p>
+      <p>Você sabia que a legislação brasileira protege você enquanto navega na rede? Conheça os seus direitos garantidos por lei:</p>
       
-      <p><strong>Privacidade dos seus dados:</strong> Nenhuma empresa pode vender ou divulgar seu nome, CPF ou número de telefone sem a sua autorização.</p>
+      <p><strong>🔒 Privacidade dos seus dados (LGPD):</strong> Nenhuma empresa ou aplicativo pode vender, compartilhar ou usar seu CPF, nome, endereço ou telefone sem a sua autorização expressa.</p>
       
-      <p><strong>Segurança bancária:</strong> Os bancos têm o dever de manter suas contas seguras. Se houver falha de segurança no sistema do banco, a responsabilidade é da instituição.</p>
+      <p><strong>🏦 Segurança bancária:</strong> Os bancos têm o dever legal de proteger sua conta contra invasões. Se ocorrer alguma falha comprovada no sistema de segurança do banco, a instituição deve se responsabilizar.</p>
       
-      <div class="caixa-destaque-direitos">
-        📌 Lembre-se: Você tem o direito de desistir de compras feitas pela internet em até 7 dias e pedir a exclusão das suas informações de cadastros digitais.
+      <div class="destaque-direito">
+        📌 Lembre-se sempre: Você tem o direito de cancelar qualquer serviço contratado pela internet em até 7 dias e pedir a exclusão total dos seus dados de cadastros digitais.
       </div>
     </section>
 
-    <section>
+    <!-- SEÇÃO 4: COMO SABER SE ESTOU CAINDO EM UM GOLPE? -->
+    <section id="secao-golpes">
       <h2>🚨 Como saber se estou caindo em um golpe?</h2>
-      <p style="margin-bottom: 22px;">Fique muito atento caso note alguma destas atitudes suspeitas durante uma conversa:</p>
+      <p style="margin-bottom: 22px;">Fique muito atento! A conversa pode ser um golpe se você notar qualquer uma destas atitudes:</p>
       
-      <ul class="lista-suspeitas">
+      <ul class="lista-golpe">
         <li>
-          <strong>Urgência e Pressão:</strong> A pessoa diz que você deve pagar algo "imediatamente" para não perder um benefício ou não ter a conta bloqueada.
+          <strong>Pressão e Urgência Exagerada:</strong> O golpista diz que você precisa pagar ou transferir algo "agora mesmo", senão sua conta bancária ou benefício será cancelado.
         </li>
         <li>
-          <strong>Pedir para não contar a ninguém:</strong> O contato insiste para que você mantenha segredo e não fale com seus filhos, parentes ou com o banco.
+          <strong>Pedido de Segredo:</strong> A pessoa pede expressamente para você não contar a nenhum filho, parente ou gerente do banco sobre a conversa.
         </li>
         <li>
-          <strong>Promessas de prêmios fáceis:</strong> Mensagens dizendo que você ganhou um prêmio, mas precisa pagar uma taxa primeiro para receber o dinheiro.
+          <strong>Premios e Dinheiro Fácil:</strong> Mensagens dizendo que você ganhou uma loteria, indenização do governo ou sorteio, mas exigem que você pague uma "taxa" antes para receber.
         </li>
         <li>
-          <strong>Perfil com foto de conhecido em número novo:</strong> Alguém usando a foto de um filho ou neto no WhatsApp pedindo transferência urgente de dinheiro.
+          <strong>Mensagens de Parentes com Foto em Número Novo:</strong> Alguém usando a foto de foto de perfil do seu filho ou neto dizendo: <em>"Mudei de número, me manda um Pix urgente"</em>.
         </li>
       </ul>
     </section>
+
+    <!-- SEÇÃO INTERATIVA: PRÁTICA RÁPIDA -->
+    <section id="secao-pratica">
+      <h2>🎯 Teste Rápido: É Golpe ou Seguro?</h2>
+      <div class="bloco-pratica">
+        <p><strong>Situação:</strong> Você recebe uma mensagem no WhatsApp do seu banco dizendo: <em>"Sua senha expira hoje! Clique aqui para recadastrar."</em> O que fazer?</p>
+        
+        <div class="botoes-resposta">
+          <button class="botao-opcao" onclick="verificarResposta(false)">Clicar no link imediatamente</button>
+          <button class="botao-opcao" onclick="verificarResposta(true)">Ignorar e ligar para o banco</button>
+        </div>
+
+        <div id="resultado-teste" class="caixa-resultado"></div>
+      </div>
+    </section>
   </main>
 
+  <!-- MODAL DE EMERGÊNCIA / AJUDA -->
+  <div id="modal-ajuda" class="modal-fundo" role="dialog" aria-labelledby="titulo-modal" aria-hidden="true">
+    <div class="modal-conteudo">
+      <h3 id="titulo-modal">🚨 Central de Ajuda Rápida</h3>
+      <p>Se você suspeita que caiu em um golpe ou precisa de orientação imediata, escolha uma opção abaixo:</p>
+
+      <div class="opcoes-ajuda">
+        <a href="tel:190" class="link-emergencia">
+          📞 Ligar para a Polícia (190)
+        </a>
+        <a href="tel:181" class="link-emergencia" style="background-color: #2E7D32;">
+          🛡️ Disque Denúncia / Orientação (181)
+        </a>
+      </div>
+
+      <p style="font-size: 0.9em; margin-bottom: 20px;">
+        💡 <em>Dica: Em caso de dúvida sobre transferências, entre em contato direto com o gerente do seu banco.</em>
+      </p>
+
+      <button class="botao-fechar" onclick="fecharModalAjuda()">Fechar Janela</button>
+    </div>
+  </div>
+
+  <script>
+    // CONTROLE DE TAMANHO DA FONTE
+    let tamanhoFonteAtual = 22;
+    function alterarTamanhoFonte(delta) {
+      tamanhoFonteAtual += delta;
+      if (tamanhoFonteAtual < 16) tamanhoFonteAtual = 16;
+      if (tamanhoFonteAtual > 32) tamanhoFonteAtual = 32;
+      document.documentElement.style.setProperty('--tamanho-fonte-base', tamanhoFonteAtual + 'px');
+    }
+
+    // ALTERNAR ALTO CONTRASTE
+    function alternarAltoContraste() {
+      document.body.classList.toggle('alto-contraste');
+    }
+
+    // MODAL DE AJUDA
+    function abrirModalAjuda() {
+      const modal = document.getElementById('modal-ajuda');
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function fecharModalAjuda() {
+      const modal = document.getElementById('modal-ajuda');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // TESTE INTERATIVO
+    function verificarResposta(correta) {
+      const caixaResultado = document.getElementById('resultado-teste');
+      caixaResultado.style.display = 'block';
+
+      if (correta) {
+        caixaResultado.style.backgroundColor = '#D4EDDA';
+        caixaResultado.style.color = '#155724';
+        caixaResultado.style.border = '2px solid #C3E6CB';
+        caixaResultado.innerHTML = '✅ <strong>Parabéns! Resposta Correta.</strong> Nunca clique em links recebidos. Bancos não solicitam recadastro de senha por link de mensagem.';
+      } else {
+        caixaResultado.style.backgroundColor = '#F8D7DA';
+        caixaResultado.style.color = '#721C24';
+        caixaResultado.style.border = '2px solid #F5C6CB';
+        caixaResultado.innerHTML = '❌ <strong>Cuidado!</strong> Clicar nesse link pode roubar suas senhas. A atitude correta é ignorar a mensagem e procurar seu banco.';
+      }
+    }
+
+    // RECURSO DE SÍNTESE DE VOZ (OUVIR A TELA)
+    let sintetizador = window.speechSynthesis;
+    let lendo = false;
+
+    function lerTextoPagina() {
+      if (!sintetizador) {
+        alert("Desculpe, seu navegador não suporta leitura por voz.");
+        return;
+      }
+
+      if (sintetizador.speaking) {
+        sintetizador.cancel();
+        lendo = false;
+        return;
+      }
+
+      const conteudoMain = document.querySelector('main').innerText;
+      const mensagem = new SpeechSynthesisUtterance(conteudoMain);
+      mensagem.lang = 'pt-BR';
+      mensagem.rate = 0.9; // Velocidade ligeiramente reduzida para clareza
+
+      sintetizador.speak(mensagem);
+    }
+  </script>
+</body>
+</html>
+    <!-- SEÇÃO 2: DICAS IMPORTANTES -->
+    <section id="secao-dicas">
+      <h2>💡 Dicas Importantes</h2>
+      <div class="lista-dicas">
+        
+        <article class="cartao-dica">
+          <h3>1. Proteja seus códigos secretos</h3>
+          <p>Nunca envie para ninguém o código de 6 dígitos que chega por SMS ou mensagem no seu celular. Esse código dá acesso às suas contas.</p>
+        </article>
+
+        <article class="cartao-dica">
+          <h3>2. Pare e confirme com calma</h3>
+          <p>Se um parente ou amigo pedir dinheiro urgente por um número de telefone novo, desligue e ligue para o número antigo dele antes de transferir qualquer valor.</p>
+        </article>
+
+        <article class="cartao-dica">
+          <h3>3. Evite clicar em links desconhecidos</h3>
+          <p>Bancos e órgãos do governo não mandam mensagens por SMS cobrando pagamentos ou pedindo atualizações de cadastro urgentes por link.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: DIREITOS NA INTERNET -->
+    <section class="texto-direitos" id="secao-direitos">
+      <h2>⚖️ Seus Direitos na Internet</h2>
+      <p>Você sabia que a legislação brasileira protege você enquanto navega na rede? Conheça os seus direitos garantidos por lei:</p>
+      
+      <p><strong>🔒 Privacidade dos seus dados (LGPD):</strong> Nenhuma empresa ou aplicativo pode vender, compartilhar ou usar seu CPF, nome, endereço ou telefone sem a sua autorização expressa.</p>
+      
+      <p><strong>🏦 Segurança bancária:</strong> Os bancos têm o dever legal de proteger sua conta contra invasões. Se ocorrer alguma falha comprovada no sistema de segurança do banco, a instituição deve se responsabilizar.</p>
+      
+      <div class="destaque-direito">
+        📌 Lembre-se sempre: Você tem o direito de cancelar qualquer serviço contratado pela internet em até 7 dias e pedir a exclusão total dos seus dados de cadastros digitais.
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: COMO SABER SE ESTOU CAINDO EM UM GOLPE? -->
+    <section id="secao-golpes">
+      <h2>🚨 Como saber se estou caindo em um golpe?</h2>
+      <p style="margin-bottom: 22px;">Fique muito atento! A conversa pode ser um golpe se você notar qualquer uma destas atitudes:</p>
+      
+      <ul class="lista-golpe">
+        <li>
+          <strong>Pressão e Urgência Exagerada:</strong> O golpista diz que você precisa pagar ou transferir algo "agora mesmo", senão sua conta bancária ou benefício será cancelado.
+        </li>
+        <li>
+          <strong>Pedido de Segredo:</strong> A pessoa pede expressamente para você não contar a nenhum filho, parente ou gerente do banco sobre a conversa.
+        </li>
+        <li>
+          <strong>Premios e Dinheiro Fácil:</strong> Mensagens dizendo que você ganhou uma loteria, indenização do governo ou sorteio, mas exigem que você pague uma "taxa" antes para receber.
+        </li>
+        <li>
+          <strong>Mensagens de Parentes com Foto em Número Novo:</strong> Alguém usando a foto de foto de perfil do seu filho ou neto dizendo: <em>"Mudei de número, me manda um Pix urgente"</em>.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SEÇÃO INTERATIVA: PRÁTICA RÁPIDA -->
+    <section id="secao-pratica">
+      <h2>🎯 Teste Rápido: É Golpe ou Seguro?</h2>
+      <div class="bloco-pratica">
+        <p><strong>Situação:</strong> Você recebe uma mensagem no WhatsApp do seu banco dizendo: <em>"Sua senha expira hoje! Clique aqui para recadastrar."</em> O que fazer?</p>
+        
+        <div class="botoes-resposta">
+          <button class="botao-opcao" onclick="verificarResposta(false)">Clicar no link imediatamente</button>
+          <button class="botao-opcao" onclick="verificarResposta(true)">Ignorar e ligar para o banco</button>
+        </div>
+
+        <div id="resultado-teste" class="caixa-resultado"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DE EMERGÊNCIA / AJUDA -->
+  <div id="modal-ajuda" class="modal-fundo" role="dialog" aria-labelledby="titulo-modal" aria-hidden="true">
+    <div class="modal-conteudo">
+      <h3 id="titulo-modal">🚨 Central de Ajuda Rápida</h3>
+      <p>Se você suspeita que caiu em um golpe ou precisa de orientação imediata, escolha uma opção abaixo:</p>
+
+      <div class="opcoes-ajuda">
+        <a href="tel:190" class="link-emergencia">
+          📞 Ligar para a Polícia (190)
+        </a>
+        <a href="tel:181" class="link-emergencia" style="background-color: #2E7D32;">
+          🛡️ Disque Denúncia / Orientação (181)
+        </a>
+      </div>
+
+      <p style="font-size: 0.9em; margin-bottom: 20px;">
+        💡 <em>Dica: Em caso de dúvida sobre transferências, entre em contato direto com o gerente do seu banco.</em>
+      </p>
+
+      <button class="botao-fechar" onclick="fecharModalAjuda()">Fechar Janela</button>
+    </div>
+  </div>
+
+  <script>
+    // CONTROLE DE TAMANHO DA FONTE
+    let tamanhoFonteAtual = 22;
+    function alterarTamanhoFonte(delta) {
+      tamanhoFonteAtual += delta;
+      if (tamanhoFonteAtual < 16) tamanhoFonteAtual = 16;
+      if (tamanhoFonteAtual > 32) tamanhoFonteAtual = 32;
+      document.documentElement.style.setProperty('--tamanho-fonte-base', tamanhoFonteAtual + 'px');
+    }
+
+    // ALTERNAR ALTO CONTRASTE
+    function alternarAltoContraste() {
+      document.body.classList.toggle('alto-contraste');
+    }
+
+    // MODAL DE AJUDA
+    function abrirModalAjuda() {
+      const modal = document.getElementById('modal-ajuda');
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function fecharModalAjuda() {
+      const modal = document.getElementById('modal-ajuda');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // TESTE INTERATIVO
+    function verificarResposta(correta) {
+      const caixaResultado = document.getElementById('resultado-teste');
+      caixaResultado.style.display = 'block';
+
+      if (correta) {
+        caixaResultado.style.backgroundColor = '#D4EDDA';
+        caixaResultado.style.color = '#155724';
+        caixaResultado.style.border = '2px solid #C3E6CB';
+        caixaResultado.innerHTML = '✅ <strong>Parabéns! Resposta Correta.</strong> Nunca clique em links recebidos. Bancos não solicitam recadastro de senha por link de mensagem.';
+      } else {
+        caixaResultado.style.backgroundColor = '#F8D7DA';
+        caixaResultado.style.color = '#721C24';
+        caixaResultado.style.border = '2px solid #F5C6CB';
+        caixaResultado.innerHTML = '❌ <strong>Cuidado!</strong> Clicar nesse link pode roubar suas senhas. A atitude correta é ignorar a mensagem e procurar seu banco.';
+      }
+    }
+
+    // RECURSO DE SÍNTESE DE VOZ (OUVIR A TELA)
+    let sintetizador = window.speechSynthesis;
+    let lendo = false;
+
+    function lerTextoPagina() {
+      if (!sintetizador) {
+        alert("Desculpe, seu navegador não suporta leitura por voz.");
+        return;
+      }
+
+      if (sintetizador.speaking) {
+        sintetizador.cancel();
+        lendo = false;
+        return;
+      }
+
+      const conteudoMain = document.querySelector('main').innerText;
+      const mensagem = new SpeechSynthesisUtterance(conteudoMain);
+      mensagem.lang = 'pt-BR';
+      mensagem.rate = 0.9; // Velocidade ligeiramente reduzida para clareza
+
+      sintetizador.speak(mensagem);
+    }
+  </script>
 </body>
 </html>
