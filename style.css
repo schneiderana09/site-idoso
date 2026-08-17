@@ -2,15 +2,15 @@
 border-radius: 16px;
       text-decoration: none;
       box-shadow: 0 6px 14px rgb:root {
-      --tamanho-fonte-base: 22px;
-      --cor-fundo: F4F7FA;
-      --cor-cartao: #FFFFFF;
-      --cor-texto: 1A1A1A;
-      --cor-primaria: #004B87;
-      --cor-primaria-escura: #002D54;
-      --cor-destaque: #D9381E;
-      --cor-destaque-hover: #B22222;
-      --cor-sucesso: #1B7E39;
+      -tamanho-fonte-base: 22px;
+      -cor-fundo: F4F7FA;
+      -cor-cartao: #FFFFFF;
+      -cor-texto: 1A1A1A;
+      -cor-primaria: #004B87;
+      -cor-primaria-escura: #002D54;
+      -cor-destaque: #D9381E;
+      -cor-destaque-hover: #B22222;
+      -cor-sucesso: #1B7E39;
       --cor-alerta-fundo: #FFF3CD;
       --cor-borda: #C3D1DF;
       --foco-visivel: #FFD700;
@@ -47,8 +47,8 @@ border-radius: 16px;
       transition: background-color 0.3s, color 0.3s;
     }
 
-    /* BARRA DE FERRAMENTAS DE ACESSIBILIDADE */
-    .barra-acessibilidade {
+  
+    barra-acessibilidade {
       background-color: var(--cor-primaria-escura);
       color: #FFFFFF;
       padding: 12px 20px;
@@ -63,12 +63,12 @@ border-radius: 16px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .grupo-botoes-acessibilidade {
+    grupo-botoes-acessibilidade {
       display: flex;
       gap: 10px;
     }
 
-    .botao-ferramenta {
+    botao-ferramenta {
       background-color: #FFFFFF;
       color: #002D54;
       border: 2px solid var(--foco-visivel);
@@ -82,8 +82,8 @@ border-radius: 16px;
       gap: 6px;
     }
 
-    .botao-ferramenta:hover,
-    .botao-ferramenta:focus {
+    botao-ferramenta:hover,
+    botao-ferramenta:focus {
       background-color: var(--foco-visivel);
       color: #000000;
       outline: 4px solid var(--foco-visivel);
@@ -117,7 +117,7 @@ border-radius: 16px;
     }
 
     /* Botão de Ajuda */
-    .botao-ajuda {
+    botao-ajuda {
       display: inline-block;
       background-color: var(--cor-destaque);
       color: #FFFFFF;
@@ -129,8 +129,8 @@ border-radius: 16px;
       transition: transform 0.2s, background-color 0.2s;
     }
 
-    .botao-ajuda:hover, 
-    .botao-ajuda:focus {
+    botao-ajuda:hover, 
+    botao-ajuda:focus {
       background-color: var(--cor-destaque-hover);
       transform: scale(1.03);
       outline: 4px solid var(--foco-visivel);
@@ -164,13 +164,13 @@ border-radius: 16px;
     }
 
     /* 2. DICAS IMPORTANTES */
-    .lista-dicas {
+    lista-dicas {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
 
-    .cartao-dica {
+    cartao-dica {
       background-color: var(--cor-fundo);
       border-left: 10px solid var(--cor-primaria);
       padding: 22px;
@@ -180,18 +180,18 @@ border-radius: 16px;
       border-bottom: 1px solid var(--cor-borda);
     }
 
-    .cartao-dica h3 {
+    cartao-dica h3 {
       font-size: 1.15em;
       color: var(--cor-primaria);
       margin-bottom: 8px;
     }
 
     /* 3. DIREITOS NA INTERNET */
-    .texto-direitos p {
+    texto-direitos p {
       margin-bottom: 20px;
     }
 
-    .destaque-direito {
+    destaque-direito {
       background-color: var(--cor-alerta-fundo);
       border: 3px solid var(--cor-primaria);
       padding: 20px;
@@ -201,17 +201,17 @@ border-radius: 16px;
     }
 
     /* 4. ATITUDES SUSPEITAS (COMO SABER SE É GOLPE) */
-    .lista-golpe {
+    lista-golpe {
       list-style-type: none;
     }
 
-    .lista-golpe li {
+    lista-golpe li {
       margin-bottom: 22px;
       padding-left: 50px;
       position: relative;
     }
 
-    .lista-golpe li::before {
+    lista-golpe li::before {
       content: "⚠️";
       position: absolute;
       left: 0;
@@ -220,21 +220,21 @@ border-radius: 16px;
     }
 
     /* SEÇÃO BÔNUS: QUIZ / PRÁTICA INTERATIVA */
-    .bloco-pratica {
+    bloco-pratica {
       background-color: var(--cor-fundo);
       padding: 20px;
       border-radius: 12px;
       border: 2px dashed var(--cor-primaria);
     }
 
-    .botoes-resposta {
+    botoes-resposta {
       display: flex;
       gap: 15px;
       margin-top: 15px;
       flex-wrap: wrap;
     }
 
-    .botao-opcao {
+    botao-opcao {
       flex: 1;
       min-width: 140px;
       padding: 16px;
@@ -247,14 +247,14 @@ border-radius: 16px;
       cursor: pointer;
     }
 
-    .botao-opcao:hover,
-    .botao-opcao:focus {
+    botao-opcao:hover,
+    botao-opcao:focus {
       background-color: var(--cor-primaria);
       color: #FFFFFF;
       outline: 4px solid var(--foco-visivel);
     }
 
-    .caixa-resultado {
+    caixa-resultado {
       margin-top: 15px;
       padding: 15px;
       border-radius: 8px;
@@ -263,7 +263,7 @@ border-radius: 16px;
     }
 
     /* MODAL DE AJUDA */
-    .modal-fundo {
+    modal-fundo {
       position: fixed;
       top: 0;
       left: 0;
@@ -277,7 +277,7 @@ border-radius: 16px;
       padding: 20px;
     }
 
-    .modal-conteudo {
+    modal-conteudo {
       background-color: var(--cor-cartao);
       color: var(--cor-texto);
       padding: 30px;
@@ -289,20 +289,20 @@ border-radius: 16px;
       text-align: center;
     }
 
-    .modal-conteudo h3 {
+    modal-conteudo h3 {
       font-size: 1.4em;
       color: var(--cor-destaque);
       margin-bottom: 15px;
     }
 
-    .opcoes-ajuda {
+    opcoes-ajuda {
       display: flex;
       flex-direction: column;
       gap: 15px;
       margin: 25px 0;
     }
 
-    .link-emergencia {
+    link-emergencia {
       display: block;
       padding: 18px;
       background-color: var(--cor-primaria);
@@ -314,13 +314,13 @@ border-radius: 16px;
       border: 2px solid var(--cor-primaria-escura);
     }
 
-    .link-emergencia:hover,
-    .link-emergencia:focus {
+    link-emergencia:hover,
+    link-emergencia:focus {
       background-color: var(--cor-primaria-escura);
       outline: 4px solid var(--foco-visivel);
     }
 
-    .botao-fechar {
+    botao-fechar {
       background-color: #666666;
       color: #FFFFFF;
       border: none;
@@ -331,8 +331,8 @@ border-radius: 16px;
       cursor: pointer;
     }
 
-    .botao-fechar:hover,
-    .botao-fechar:focus {
+    botao-fechar:hover,
+    botao-fechar:focus {
       background-color: #333333;
       outline: 4px solid var(--foco-visivel);
     }
